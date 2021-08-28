@@ -1,5 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {GithubService} from './github.service'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,17 +24,20 @@ import { RepositoryComponent } from './repository/repository.component';
     HomeComponent,
     UserComponent,
     ClassComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

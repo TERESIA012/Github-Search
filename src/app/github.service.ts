@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class GithubService {
 
   private username: string;
-  private clientToken: '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';
+  private clienttoken: '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';
 
 
   constructor(private httpClient: HttpClient) {
@@ -17,9 +17,13 @@ export class GithubService {
 
   }
   getPersonalInfo() {
-    return this.httpClient.get("https://api.github.com/users/" + this.username + "?client_Token=" + this.clientToken);
-  .map(res =>res.json());
-  }
+    return this.httpClient.get('https://api.github.com/users/'+this.username + "?client_token=" + this.clienttoken)
+    .map((res: any) => {
+      return res
+  });
+}
+
+  
 
 
 
