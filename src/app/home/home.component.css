@@ -5,3 +5,8 @@
 h2 {
     font-size:20px;
 }
+
+#carduser{
+    position:absolute;
+    margin-left: 3rem;
+}
