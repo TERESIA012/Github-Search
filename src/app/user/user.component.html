@@ -6,9 +6,9 @@
                     <h4>Github User Search</h4>
                 </div>
                 <div class="card-body">
-                    <form class="form-inline">
+                    <form class="form-inline" (ngSubmit)='findUser(('>
                         <div class="form-group">
-                            <input size="40" name="user" type="search" class="form-control"
+                            <input size="40" name="user" [(ngModel)]="user" type="search" class="form-control"
                                 placeholder="Github User Search">
                         </div><br>
                         <div>
@@ -16,6 +16,30 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container" id="container">
+    <div class="col-md-4">
+        <div class="carduser" *ngIf="personal">
+            <div class="card mt-5 ">
+                <img src="{{personal.avatar_url}}" class="card-img-top" alt="..." height="300">
+                <div class="card-body">
+                    <h2 class="card-title">Name:{{personal.name}}</h2>
+                    <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Bio:{{personal.bio}}</li>
+                    <li class="list-group-item">Username:{{personal.login}}</li>
+                    <li class="list-group-item">Followers:{{personal.followers}}</li>
+                    <li class="list-group-item">Following:{{personal.following}}</li>
+                    <li class="list-group-item">Location:{{personal.location}}</li><br>
+                    <p><a href="{{personal.html_url}}" class="btn btn-primary btn-sm ">View Profile</a></p>
+                </ul>
             </div>
         </div>
     </div>

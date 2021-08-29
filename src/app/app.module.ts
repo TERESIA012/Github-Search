@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { ClassComponent } from './class/class.component';
 import { RepositoryComponent } from './repository/repository.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RepositoryComponent } from './repository/repository.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]

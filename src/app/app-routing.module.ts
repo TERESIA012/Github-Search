@@ -7,7 +7,12 @@ import{RepositoryComponent} from './repository/repository.component'
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'user', component: UserComponent },
-  { path: 'repository', component: RepositoryComponent }
+  { path: 'repository', component: RepositoryComponent },
+
+
+  { path: '', redirectTo:'/home', pathMatch:'full' },
+  // { path: '', redirectTo:'/home', pathMatch:'full' },
+
 ];
 
 @NgModule({

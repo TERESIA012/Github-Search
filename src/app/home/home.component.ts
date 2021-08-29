@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   repos: any
 
 
-  constructor(public githubservice: GithubService) {
+  constructor(private githubservice: GithubService) {
     this.githubservice.getPersonalInfo().subscribe(personal => {
       console.log(personal);
       this.personal = personal;
