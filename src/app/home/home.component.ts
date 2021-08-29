@@ -9,7 +9,8 @@ import { GithubService } from '../github.service';
 })
 export class HomeComponent implements OnInit {
   personal: any;
-  repos: any
+  repos: any;
+  user: string;
 
 
   constructor(private githubservice: GithubService) {
@@ -23,7 +24,29 @@ export class HomeComponent implements OnInit {
       console.log(repos);
       this.repos=repos;
     });
+
+
+    
   }
+
+
+  // findUser() {
+  //   this.githubservice.findUserName(this.user)
+    
+
+  //   this.githubservice.getPersonalInfo().subscribe(personal => {
+
+  //     this.personal = personal;
+  //   });
+
+  //   this.githubservice.getRepos().subscribe(repos => {
+  //     console.log(repos);
+  //     this.personal=repos;
+  //   });
+  // }
+
+
+  
 
   ngOnInit(): void {
   }

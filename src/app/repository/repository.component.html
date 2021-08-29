@@ -3,12 +3,12 @@
         <div class="col">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h4>Github User Search</h4>
+                    <h4>Github Repository</h4>
                 </div>
                 <div class="card-body">
                     <form class="form-inline">
                         <div class="form-group">
-                            <input size="40" type="search" class="form-control" placeholder="Repository Search">
+                            <input size="40" type="text" class="form-control"  name="repo"  ([ngModel])= "repo" placeholder="Repository Search">
                         </div><br>
                         <div>
                             <input type="submit" value="submit" class="btn btn-primary btn-sm">
@@ -19,3 +19,25 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+   
+        <div class="row">
+            <h2>Repositories</h2>
+            <div class="col-md-3" *ngFor="let repo of repos">
+                <div class="card2">
+                    <div class="card border-success mt-5">
+                        <div class="card-header"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{repo.name}}</h5>
+                            <p class="card-text">{{repo.description}}</p>
+                            <a href="{{repo.html_url}}" class="card-link" class="btn btn-sm btn-primary">View
+                                the
+                                Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
