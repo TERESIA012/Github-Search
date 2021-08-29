@@ -23,6 +23,13 @@ export class GithubService {
   });
 }
 
+getRepos(){
+  return this.httpClient.get('https://api.github.com/users/'+this.username + "/repos?client_token=" + this.clienttoken)
+  .map((res: any) => {
+    return res
+});
+}
+
   
 
 

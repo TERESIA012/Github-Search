@@ -1,18 +1,87 @@
-<div class="card" style="width: 18rem; ">
-    <img src="{{personal.avatar_url}}" class="card-img-top img-circle img-responsive" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Name:{{personal.name}}</h5>
-        <p class="card-text">Username:{{personal.login}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="carduser" *ngIf="personal">
+                <div class="card mt-5">
+                    <img src="{{personal.avatar_url}}" class="card-img-top" alt="..." height="300">
+                    <div class="card-body">
+                        <h2 class="card-title">Name:{{personal.name}}</h2>
+                        <p class="card-text"></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Bio{{personal.bio}}</li>
+                        <li class="list-group-item">Username:{{personal.login}}</li>
+                        <li class="list-group-item">Followers:{{personal.followers}}</li>
+                        <li class="list-group-item">Following:{{personal.following}}</li>
+                        <li class="list-group-item">Location:{{personal.location}}</li><br>
+                         <p><a href="{{personal.html_url}}" class="btn btn-primary btn-sm">View Profile</a></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <h2>Repositories</h2>
+                <div class="col-md-6" *ngFor="let repo of repos">
+                    <div class="card2">
+                        <div class="card border-success mt-5">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{repo.name}}</h5>
+                                <p class="card-text">{{repo.description}}</p>
+                                <a href="{{repo.html_url}}" class="card-link" class="btn btn-sm btn-primary">View the Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Bio:{{personal.bio}}</li>
-        <li class="list-group-item"> Followers:{{personal.followers}}</li>
-        <li class="list-group-item">Following:{{personal.following}}</li>
-        <li class="list-group-item">Location:{{personal.location}}</li>
-        <li class="list-group-item">Repository:{{personal.public_repos}}</li>
-    </ul>
-     <!-- <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div> -->
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--end-->>
+<!-- <div class="container">
+    <div class="card" style="width: 18rem; ">
+        <img src="{{personal.avatar_url}}" class="card-img-top img-circle img-responsive" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Name:{{personal.name}}</h5>
+            <p class="card-text">Username:{{personal.login}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Bio:{{personal.bio}}</li>
+            <li class="list-group-item"> Followers:{{personal.followers}}</li>
+            <li class="list-group-item">Following:{{personal.following}}</li>
+            <li class="list-group-item">Location:{{personal.location}}</li>
+            <li class="list-group-item">Repository:{{personal.public_repos}}<br><br>
+                <p><a href="{{personal.html_url}}" class="btn btn-primary btn-sm">View Profile</a></p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <h2>Repositories</h2>
+        <div class="card-body" *ngFor="let repo of repos">
+          <h5 class="card-title"></h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{repo.name}}</h6>
+          <p class="card-text"></p>
+          <a href="{{repo.html_url}}" class="card-link" class="btn btn-sm btn-primary">View the Project</a>
+          <a href="#" class="card-link"></a>
+        </div>
+      </div>
+    
+</div> -->
