@@ -12,19 +12,21 @@ export class UserComponent implements OnInit {
 
 
   constructor(private githubservice: GithubService) {
-   
+
   }
 
-  
+
 
   findUser() {
     this.githubservice.findUserName(this.user)
+    
 
     this.githubservice.getPersonalInfo().subscribe(personal => {
-    
+
       this.personal = personal;
     });
   }
+  
 
   ngOnInit(): void {
   }
