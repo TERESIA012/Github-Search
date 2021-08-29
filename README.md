@@ -1,8 +1,34 @@
 # Githubsearch
 
 ## Description
-### GithubSearch is an application that allows the user to input a github username and repository name and then it displays the details of the user and the repositories.
+#### GithubSearch is an application that allows the user to input a github username and repository name and then it displays the details of the user and the repositories.
 ___
+## Setup Requirements
+* Git
+* Web Browser
+* Github
+* Angular Cli
+* Node.js
+* NPM
+* Github token 
+____
+
+## Setup Instruction
+
+* Fork/Clone the Repository
+* $git clone url
+* Open your project on your favourite editor
+* Open your project on Live Server
+___
+ ### Known Bugs
+ #### N0 Known Bugs
+ ___
+ ## Technologies used
+ * HTML
+ * CSS
+ * BOOTSTRAP
+ * ANGULAR CLI
+ ___
 
 
 
@@ -31,3 +57,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# Licence
+## &copy;2021
