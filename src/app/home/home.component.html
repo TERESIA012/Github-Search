@@ -1,21 +1,18 @@
-<!-- <!-- 
-
-
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+<div class="card" style="width: 18rem; ">
+    <img src="{{personal.avatar_url}}" class="card-img-top img-circle img-responsive" alt="...">
     <div class="card-body">
-        <h5 class="card-title">Teresia King'ori</h5>
-        <p class="card-text">Teresia012</p>
+        <h5 class="card-title">Name:{{personal.name}}</h5>
+        <p class="card-text">Username:{{personal.login}}</p>
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">Stemist</li>
-        <li class="list-group-item">Followers</li>
-        <li class="list-group-item">Following</li>
-        <li class="list-group-item">Location</li>
-        <li class="list-group-item">Date</li>
+        <li class="list-group-item"> Bio:{{personal.bio}}</li>
+        <li class="list-group-item"> Followers:{{personal.followers}}</li>
+        <li class="list-group-item">Following:{{personal.following}}</li>
+        <li class="list-group-item">Location:{{personal.location}}</li>
+        <li class="list-group-item">Repository:{{personal.public_repos}}</li>
     </ul>
-    <!-- <div class="card-body">
+     <!-- <div class="card-body">
       <a href="#" class="card-link">Card link</a>
       <a href="#" class="card-link">Another link</a>
     </div> -->
-<!-- </div>  --> 
+</div>
