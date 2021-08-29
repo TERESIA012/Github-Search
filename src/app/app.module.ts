@@ -17,6 +17,7 @@ import { UserComponent } from './user/user.component';
 import { ClassComponent } from './class/class.component';
 import { RepositoryComponent } from './repository/repository.component';
 import {FormsModule} from '@angular/forms';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {FormsModule} from '@angular/forms';
     UserComponent,
     ClassComponent,
     RepositoryComponent,
+    DateCountPipe,
     
   ],
   
