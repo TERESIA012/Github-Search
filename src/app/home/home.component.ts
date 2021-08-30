@@ -14,6 +14,20 @@ export class HomeComponent implements OnInit {
 
 
   constructor(private githubservice: GithubService) {
+    
+
+
+    
+  }
+
+
+
+
+  
+
+  ngOnInit(): void {
+    this.user="TERESIA012"
+    this.githubservice.findUserName(this.user)
     this.githubservice.getPersonalInfo().subscribe(personal => {
       console.log(personal);
       this.personal = personal;
@@ -26,29 +40,6 @@ export class HomeComponent implements OnInit {
     });
 
 
-    
-  }
-
-
-  // findUser() {
-  //   this.githubservice.findUserName(this.user)
-    
-
-  //   this.githubservice.getPersonalInfo().subscribe(personal => {
-
-  //     this.personal = personal;
-  //   });
-
-  //   this.githubservice.getRepos().subscribe(repos => {
-  //     console.log(repos);
-  //     this.personal=repos;
-  //   });
-  // }
-
-
-  
-
-  ngOnInit(): void {
   }
 
 }
