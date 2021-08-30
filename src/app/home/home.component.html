@@ -2,7 +2,7 @@
     <div class="row">
         <div class="container" id="container">
             <div class="col-md-4">
-                <div class="carduser" *ngIf="personal">
+                <div class="carduser" >
                     <div class="card mt-5 ">
                         <img src="{{personal.avatar_url}}" class="card-img-top" alt="..." height="300">
                         <div class="card-body">
@@ -15,13 +15,43 @@
                             <li class="list-group-item">Followers:{{personal.followers}}</li>
                             <li class="list-group-item">Following:{{personal.following}}</li>
                             <li class="list-group-item">Location:{{personal.location}}</li><br>
-                            <li class="list-group-item">Created on :{{personal.date|date}}</li><br>
+                            <li class="list-group-item">Created on :{{personal. created_at|date}}</li><br>
                             <p><a href="{{personal.html_url}}" class="btn btn-primary btn-sm ">View Profile</a></p>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- start -->
+        <!-- <div class="card mb-3" style="max-width: 540px;" *ngIf="personal">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{personal.avatar_url}}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{personal.name}}</h5><br>
+                  <p class="card-text">{{personal.bio}}<br>
+                      {{personal.login}}<br>
+                      {{personal.followers}}<br>
+                      {{personal.following}}<br>
+                      {{personal.location}}<br>
+                      {{personal.date}}
+                  </p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        end -->
         <div class="container">
         
             <div class="row">
@@ -33,6 +63,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{repo.name}}</h5>
                                 <p class="card-text">{{repo.description}}</p>
+                                <p>Developed on:{{repo.created_at|date}}</p>
                                 <a href="{{repo.html_url}}" class="card-link" class="btn btn-sm btn-primary">View the
                                     Project</a>
                             </div>

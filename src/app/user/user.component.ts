@@ -9,11 +9,15 @@ import { GithubService } from '../github.service';
 export class UserComponent implements OnInit {
   personal: any;
   user: string;
+  repos: any;
 
 
   constructor(private githubservice: GithubService) {
 
+    
+
   }
+  
 
 
 
@@ -24,11 +28,23 @@ export class UserComponent implements OnInit {
     this.githubservice.getPersonalInfo().subscribe(personal => {
 
       this.personal = personal;
+
+
+      
+    });
+    this.githubservice.getRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos=repos;
     });
 
+
     
+  }  
+
     
-  }
+
+
+  
   
 
   ngOnInit(): void {
